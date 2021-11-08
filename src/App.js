@@ -1,7 +1,13 @@
 import "./App.css";
+import GlobalStyle from "./globalStyles";
 
 function App() {
-  return <di></di>;
+  return (
+    <>
+      <GlobalStyle />
+      App File
+    </>
+  );
 }
 
 export default App;

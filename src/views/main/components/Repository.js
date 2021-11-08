@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const REPOSITORY = styled(NavLink)`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 50%;
   left: calc(1rem + 2vw);
@@ -11,9 +11,9 @@ const REPOSITORY = styled(NavLink)`
   text-decoration: none;
   z-index: 1;
 `;
-const Repository = () => {
+const Repository = (props) => {
   return (
-    <REPOSITORY to='/repository'>
+    <REPOSITORY click={props.click} to='/repository'>
       <h4>Repository</h4>
     </REPOSITORY>
   );

@@ -14,15 +14,14 @@ const Icons = styled.div`
 `;
 
 const IconLink = styled.a`
-  color: ${(props) => props.theme.text};
   margin: 0.5rem 0;
 `;
 
 const Icon = styled.i`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   font-size: 1.6rem;
 `;
-const SocialMediaIcons = () => {
+const SocialMediaIcons = (props) => {
   return (
     <Icons>
       <IconLink
@@ -30,7 +29,7 @@ const SocialMediaIcons = () => {
         target='_blank'
         href='https://github.com/ilkaay'
       >
-        <Icon className='bi bi-github' />
+        <Icon click={props.click} className='bi bi-github' />
       </IconLink>
 
       <IconLink
@@ -38,7 +37,7 @@ const SocialMediaIcons = () => {
         target='_blank'
         href='https://twitter.com/ilkaayyuksel'
       >
-        <Icon className='bi bi-twitter' />
+        <Icon click={props.click} className='bi bi-twitter' />
       </IconLink>
 
       <IconLink
@@ -46,7 +45,7 @@ const SocialMediaIcons = () => {
         target='_blank'
         href='https://www.linkedin.com/in/ilkaayyuksel'
       >
-        <Icon className='bi bi-linkedin' />
+        <Icon click={props.click} className='bi bi-linkedin' />
       </IconLink>
     </Icons>
   );

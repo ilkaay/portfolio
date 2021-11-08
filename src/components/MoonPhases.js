@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 
 const rotate = keyframes`
@@ -17,16 +16,6 @@ const flip = keyframes`
     100% {
       left: 100%;
     }
-`;
-
-const Center = styled.button`
-  display: flex;
-  position: absolute;
-  bottom: ${(props) => (props.click ? "5%" : "50%")};
-  right: ${(props) => (props.click ? "5%" : "43%")};
-  background: none;
-  border: none;
-  transition: all 1s ease;
 `;
 
 const Moon = styled.div`
@@ -80,20 +69,16 @@ const Disc = styled.div`
   }
 `;
 
-const MoonPhases = () => {
-  const [click, setClick] = useState(false);
+const MoonPhases = (props) => {
   return (
-    <Center click={click}>
-      <Moon
-        onClick={() => setClick(!click)}
-        style={{
-          width: click ? "8rem" : "15rem",
-          height: click ? "8rem" : "15rem",
-        }}
-      >
-        <Disc></Disc>
-      </Moon>
-    </Center>
+    <Moon
+      style={{
+        width: props.click ? "8rem" : "15rem",
+        height: props.click ? "8rem" : "15rem",
+      }}
+    >
+      <Disc></Disc>
+    </Moon>
   );
 };
 

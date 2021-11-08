@@ -1,14 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-import HomeButton from "../../components/HomeButton";
-import Logo from "../../components/Logo";
 import MoonPhases from "../../components/MoonPhases";
-import SocialMediaIcons from "../../components/SocialMediaIcons";
-import Blog from "./components/Blog";
-import BottomBar from "./components/BottomBar";
-import Contact from "./components/Contact";
-import Repository from "./components/Repository";
+import LinksWrapper from "./LinksWrapper";
+import PersonalInfo from "./components/PersonalInfo";
 
 const MainContainer = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -28,17 +23,41 @@ const MainContainer = styled.div`
   padding: 2rem;
 `;
 
+const Icon = styled.button`
+  display: flex;
+  position: absolute;
+  bottom: ${(props) => (props.click ? "5%" : "50%")};
+  right: ${(props) => (props.click ? "5%" : "43%")};
+  background: none;
+  border: none;
+  transition: all 1s ease;
+`;
+
+const PersonalInfoWrapper = styled.div`
+  position: absolute;
+  background-color: #040404;
+  top: 0;
+  bottom: 0;
+  right: 50%;
+  z-index: 1;
+  transition: height 0.5s ease, width 1s ease 0.5s;
+`;
 const Main = () => {
+  const [click, setClick] = useState(false);
+
   return (
     <MainContainer>
-      <HomeButton />
-      <Logo />
-      <SocialMediaIcons />
-      <Contact />
-      <Blog />
-      <Repository />
-      <BottomBar />
-      <MoonPhases />
+      <PersonalInfoWrapper
+        style={{
+          width: click ? "50%" : "0%",
+          height: click ? "100%" : "0%",
+        }}
+      />
+      <LinksWrapper click={click} />
+      <Icon click={click} onClick={() => setClick(!click)}>
+        <MoonPhases click={click} />
+      </Icon>
+      {click && <PersonalInfo click={click} />}
     </MainContainer>
   );
 };

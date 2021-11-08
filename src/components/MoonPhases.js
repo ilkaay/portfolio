@@ -26,6 +26,7 @@ const Center = styled.button`
   right: ${(props) => (props.click ? "5%" : "43%")};
   background: none;
   border: none;
+  transition: all 1s ease;
 `;
 
 const Moon = styled.div`
@@ -37,6 +38,7 @@ const Moon = styled.div`
   position: relative;
   background-color: ${(props) => props.theme.body};
   transform: translateZ(0);
+  transition: all 1s ease;
 
   &::before {
     content: " ";

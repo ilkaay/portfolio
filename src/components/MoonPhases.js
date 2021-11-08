@@ -23,7 +23,7 @@ const Center = styled.button`
   display: flex;
   position: absolute;
   bottom: ${(props) => (props.click ? "5%" : "50%")};
-  right: ${(props) => (props.click ? "5%" : "40%")};
+  right: ${(props) => (props.click ? "5%" : "43%")};
   background: none;
   border: none;
 `;
@@ -85,8 +85,8 @@ const MoonPhases = () => {
       <Moon
         onClick={() => setClick(!click)}
         style={{
-          width: click ? "8vw" : "15vw",
-          height: click ? "8vh" : "15vh",
+          width: click ? "8rem" : "15rem",
+          height: click ? "8rem" : "15rem",
         }}
       >
         <Disc></Disc>

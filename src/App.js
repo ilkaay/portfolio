@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={darkTheme}>
         <Routes>
           <Route path='/' element={<Main />} />
           <Route path='/about' element={<About />} />

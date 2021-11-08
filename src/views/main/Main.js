@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+
 import HomeButton from "../../components/HomeButton";
 import Logo from "../../components/Logo";
+import MoonPhases from "../../components/MoonPhases";
 import SocialMediaIcons from "../../components/SocialMediaIcons";
 import Blog from "./components/Blog";
+import BottomBar from "./components/BottomBar";
 import Contact from "./components/Contact";
 import Repository from "./components/Repository";
 
@@ -34,6 +37,8 @@ const Main = () => {
       <Contact />
       <Blog />
       <Repository />
+      <BottomBar />
+      <MoonPhases />
     </MainContainer>
   );
 };

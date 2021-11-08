@@ -14,7 +14,7 @@ const BLOG = styled(NavLink)`
 const Blog = () => {
   return (
     <BLOG to='/blog'>
-      <h3>Blog</h3>
+      <h4>Blog</h4>
     </BLOG>
   );
 };

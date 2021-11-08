@@ -14,7 +14,7 @@ const REPOSITORY = styled(NavLink)`
 const Repository = () => {
   return (
     <REPOSITORY to='/repository'>
-      <h3>Repository</h3>
+      <h4>Repository</h4>
     </REPOSITORY>
   );
 };

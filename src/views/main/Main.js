@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import HomeButton from "../../components/HomeButton";
+import Logo from "../../components/Logo";
+import SocialMediaIcons from "../../components/SocialMediaIcons";
 
 const MainContainer = styled.div`
-  background: ${(props) => props.theme.body};
+  background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
   height: 100vh;
   width: 100vw;
@@ -28,6 +30,8 @@ const Main = () => {
     <MainContainer>
       <Container>
         <HomeButton />
+        <Logo />
+        <SocialMediaIcons />
       </Container>
     </MainContainer>
   );

@@ -26,8 +26,9 @@ const MainContainer = styled.div`
 const Icon = styled.button`
   display: flex;
   position: absolute;
-  bottom: ${(props) => (props.click ? "5%" : "50%")};
-  right: ${(props) => (props.click ? "5%" : "43%")};
+  transform: translate(50%, 0%);
+  bottom: ${(props) => (props.click ? "8%" : "50%")};
+  right: ${(props) => (props.click ? "8%" : "50%")};
   background: none;
   border: none;
   transition: all 1s ease;

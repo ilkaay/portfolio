@@ -77,7 +77,7 @@ const MoonPhases = (props) => {
         height: props.click ? "8rem" : "15rem",
       }}
     >
-      <Disc></Disc>
+      <Disc />
     </Moon>
   );
 };

@@ -7,7 +7,7 @@ const Home = styled.button`
   position: fixed;
   top: 2rem;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
 
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
@@ -30,8 +30,8 @@ const Home = styled.button`
   }
 
   &:hover {
-    background-color: rgba(142, 148, 242, 0.4);
-    box-shadow: 0 0 8px 6px rgba(142, 148, 242, 0.2);
+    background-color: rgb(217, 4, 41, 0.4);
+    box-shadow: 0 0 8px 6px rgb(217, 4, 41, 0.2);
   }
 `;
 const HomeButton = () => {

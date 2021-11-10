@@ -21,7 +21,7 @@ const IconLink = styled.a`
 const Icon = styled.i`
   color: ${(props) =>
     props.theme === "dark" ? darkTheme.text : darkTheme.body};
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 `;
 const SocialMediaIcons = (props) => {
   return (

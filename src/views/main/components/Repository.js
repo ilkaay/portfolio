@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
@@ -10,11 +11,17 @@ const REPOSITORY = styled(NavLink)`
   transform: translate(-50%, -50%) rotate(-90deg);
   text-decoration: none;
   z-index: 1;
+
+  &:hover {
+    color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  }
 `;
 const Repository = (props) => {
   return (
     <REPOSITORY click={props.click} to='/repository'>
-      <h4>Repository</h4>
+      <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+        Repository
+      </motion.h2>
     </REPOSITORY>
   );
 };

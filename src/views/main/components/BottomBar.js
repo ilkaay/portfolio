@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
@@ -16,21 +17,33 @@ const ABOUT = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   text-decoration: none;
   z-index: 1;
+
+  &:hover {
+    color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  }
 `;
 const SKILLS = styled(NavLink)`
   color: ${(props) => props.theme.text};
   text-decoration: none;
   z-index: 1;
+
+  &:hover {
+    color: ${(props) => props.theme.text};
+  }
 `;
 const BottomBar = (props) => {
   return (
     <BottombarContainer>
       <ABOUT click={props.click} to='/about'>
-        <h4>About...</h4>
+        <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          About...
+        </motion.h2>
       </ABOUT>
 
       <SKILLS to='/skills'>
-        <h4>My Skills...</h4>
+        <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          My Skills...
+        </motion.h2>
       </SKILLS>
     </BottombarContainer>
   );

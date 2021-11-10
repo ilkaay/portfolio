@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import ProfilePicture from "../../../assets/images/profile-img.png";
 
-const Box = styled.div`
+const Box = styled(motion.div)`
   position: fixed;
   left: 17.5%;
   top: 25%;
@@ -42,7 +43,7 @@ const SubBox = styled.div`
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -0%);
     width: 100%;
     height: auto;
   }
@@ -66,7 +67,11 @@ const Text = styled.div`
 `;
 const PersonalInfo = () => {
   return (
-    <Box>
+    <Box
+      initial={{ height: 0 }}
+      animate={{ height: "50vh" }}
+      transition={{ type: "spring", duration: 2, delay: 1 }}
+    >
       <SubBox>
         <Text>
           <h1>Hi, </h1>
@@ -75,7 +80,13 @@ const PersonalInfo = () => {
         </Text>
       </SubBox>
       <SubBox>
-        <img className='picture' alt='profile' src={ProfilePicture} />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 2 }}
+        >
+          <img className='picture' alt='profile' src={ProfilePicture} />
+        </motion.div>
       </SubBox>
     </Box>
   );

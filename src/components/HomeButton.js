@@ -7,7 +7,7 @@ const Home = styled.button`
   position: fixed;
   top: 2rem;
   left: 50%;
-  transform: translate(-50% " 0");
+  transform: translate(-50%, -50%);
 
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};

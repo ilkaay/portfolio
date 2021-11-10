@@ -8,10 +8,10 @@ import BottomBar from "./components/BottomBar";
 import Contact from "./components/Contact";
 import Repository from "./components/Repository";
 
-const renderTop = () => {
+const renderTop = (props) => {
   return (
     <>
-      <Logo />
+      <Logo theme={props.click ? "dark" : "light"} />
       <HomeButton />
       <Contact />
     </>
@@ -20,7 +20,7 @@ const renderTop = () => {
 const renderBottom = (props) => {
   return (
     <>
-      <SocialMediaIcons click={props.click} />
+      <SocialMediaIcons theme={props.click ? "dark" : "light"} />
       <BottomBar click={props.click} />
     </>
   );
@@ -36,7 +36,7 @@ const renderMiddle = (props) => {
 };
 
 const LinksWrapper = (props) => {
-  return [renderTop(), renderMiddle(props), renderBottom(props)];
+  return [renderTop(props), renderMiddle(props), renderBottom(props)];
 };
 
 export default LinksWrapper;

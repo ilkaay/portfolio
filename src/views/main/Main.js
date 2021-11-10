@@ -57,7 +57,7 @@ const Main = () => {
       <Icon click={click} onClick={() => setClick(!click)}>
         <MoonPhases click={click} />
       </Icon>
-      {click && <PersonalInfo click={click} />}
+      {click ? <PersonalInfo /> : undefined}
     </MainContainer>
   );
 };

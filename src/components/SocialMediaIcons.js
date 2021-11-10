@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { darkTheme } from "./Themes";
 
 const Icons = styled.div`
   display: flex;
@@ -18,7 +19,8 @@ const IconLink = styled.a`
 `;
 
 const Icon = styled.i`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  color: ${(props) =>
+    props.theme === "dark" ? darkTheme.text : darkTheme.body};
   font-size: 1.6rem;
 `;
 const SocialMediaIcons = (props) => {
@@ -29,7 +31,7 @@ const SocialMediaIcons = (props) => {
         target='_blank'
         href='https://github.com/ilkaay'
       >
-        <Icon click={props.click} className='bi bi-github' />
+        <Icon theme={props.theme} className='bi bi-github' />
       </IconLink>
 
       <IconLink
@@ -37,7 +39,7 @@ const SocialMediaIcons = (props) => {
         target='_blank'
         href='https://twitter.com/ilkaayyuksel'
       >
-        <Icon click={props.click} className='bi bi-twitter' />
+        <Icon theme={props.theme} className='bi bi-twitter' />
       </IconLink>
 
       <IconLink
@@ -45,7 +47,7 @@ const SocialMediaIcons = (props) => {
         target='_blank'
         href='https://www.linkedin.com/in/ilkaayyuksel'
       >
-        <Icon click={props.click} className='bi bi-linkedin' />
+        <Icon theme={props.theme} className='bi bi-linkedin' />
       </IconLink>
     </Icons>
   );

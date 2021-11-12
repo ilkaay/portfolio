@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { darkTheme } from "./Themes";
 
@@ -12,43 +14,58 @@ const Icons = styled.div`
   left: 2rem;
 
   z-index: 3;
-`;
 
-const IconLink = styled.a`
-  margin: 0.5rem 0;
+  & > *:not(:last-child) {
+    margin: 0.5rem 0;
+  }
 `;
 
 const Icon = styled.i`
   color: ${(props) =>
     props.theme === "dark" ? darkTheme.text : darkTheme.body};
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 `;
+
 const SocialMediaIcons = (props) => {
   return (
     <Icons>
-      <IconLink
-        rel='noreferrer'
-        target='_blank'
-        href='https://github.com/ilkaay'
+      <motion.div
+        initial={{ transform: "scale(0)" }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: "spring", duration: 1, delay: 1 }}
       >
-        <Icon theme={props.theme} className='bi bi-github' />
-      </IconLink>
+        <a rel='noreferrer' target='_blank' href='https://github.com/ilkaay'>
+          <Icon theme={props.theme} className='bi bi-github' />
+        </a>
+      </motion.div>
 
-      <IconLink
-        rel='noreferrer'
-        target='_blank'
-        href='https://twitter.com/ilkaayyuksel'
+      <motion.div
+        initial={{ transform: "scale(0)" }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: "spring", duration: 1, delay: 1.2 }}
       >
-        <Icon theme={props.theme} className='bi bi-twitter' />
-      </IconLink>
+        <a
+          rel='noreferrer'
+          target='_blank'
+          href='https://twitter.com/ilkaayyuksel'
+        >
+          <Icon theme={props.theme} className='bi bi-twitter' />
+        </a>
+      </motion.div>
 
-      <IconLink
-        rel='noreferrer'
-        target='_blank'
-        href='https://www.linkedin.com/in/ilkaayyuksel'
+      <motion.div
+        initial={{ transform: "scale(0)" }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: "spring", duration: 1, delay: 1.4 }}
       >
-        <Icon theme={props.theme} className='bi bi-linkedin' />
-      </IconLink>
+        <a
+          rel='noreferrer'
+          target='_blank'
+          href='https://www.linkedin.com/in/ilkaayyuksel'
+        >
+          <Icon theme={props.theme} className='bi bi-linkedin' />
+        </a>
+      </motion.div>
     </Icons>
   );
 };

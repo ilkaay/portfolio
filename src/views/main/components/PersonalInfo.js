@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import ProfilePicture from "../../../assets/images/profile-img.png";
+import ProfilePicture from "../../../assets/images/me-cat.png";
 
 const Box = styled(motion.div)`
   position: fixed;

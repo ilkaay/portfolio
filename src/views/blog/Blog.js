@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import BlogBackground from "../../assets/images/blog-background.jpg";
-import Layout from "./components/Layout";
+
+import Wrapper from "./Wrapper";
 
 const BlogContainer = styled.div`
   background-image: url(${BlogBackground});
@@ -14,19 +15,10 @@ const BlogContainer = styled.div`
   width: 100vw;
 `;
 
-const Container = styled.div`
-  background-color: ${(props) => `rgba(${props.theme.bodyRgba}, 0.8)`};
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  padding-bottom: 5rem;
-`;
 const Blog = () => {
   return (
     <BlogContainer>
-      <Container>
-        <Layout />
-      </Container>
+      <Wrapper />
     </BlogContainer>
   );
 };

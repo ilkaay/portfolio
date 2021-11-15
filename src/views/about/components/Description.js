@@ -24,14 +24,17 @@ const Container = styled.div`
 const Description = () => {
   return (
     <Container>
-      I'm a front-end developer located in India. I love to create simple yet
-      beautiful websites with great user experience.
+      I am a 4th-grade computer engineering student at Eskişehir Osmangazi
+      University.
       <br /> <br />
-      I'm interested in the whole frontend stack Like trying new things and
-      building great projects. I'm an independent freelancer and blogger. I love
-      to write blogs and read books.
-      <br /> <br />I believe everything is an Art when you put your
-      consciousness in it. You can connect with me via social links.
+      I am passionate about software development and designing websites. I
+      taught myself about front-end development because of that passion. I
+      learned HTML, CSS, JS and after that, I learned VUE and GraphQL to develop
+      more professional apps. I am still teaching myself about front-end
+      engineering and currently, I am learning React, React Native, and
+      Typescript.
+      <br /> <br />I am looking for new things to learn, to be a better
+      engineer.
     </Container>
   );
 };

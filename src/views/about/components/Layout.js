@@ -12,7 +12,7 @@ const Layout = () => {
       <SocialMediaIcons theme='dark' />
       <HomeButton />
       <Particle theme='dark' />
-      <BigTitle text='ABOUT' top='10%' left='5%' />
+      <BigTitle text='ABOUT' bottom='10%' right='5%' />
     </>
   );
 };

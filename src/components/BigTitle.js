@@ -4,6 +4,7 @@ import styled from "styled-components";
 const TitleText = styled.h1`
   position: fixed;
   top: ${(props) => props.top};
+  bottom: ${(props) => props.bottom};
   left: ${(props) => props.left};
   right: ${(props) => props.right};
   color: ${(props) => `rgba(${props.theme.textRgba},0.1)`};
@@ -12,7 +13,12 @@ const TitleText = styled.h1`
 `;
 const BigTitle = (props) => {
   return (
-    <TitleText top={props.top} left={props.left} right={props.right}>
+    <TitleText
+      top={props.top}
+      bottom={props.bottom}
+      left={props.left}
+      right={props.right}
+    >
       {props.text}
     </TitleText>
   );

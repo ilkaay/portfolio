@@ -60,7 +60,7 @@ const Text = styled.div`
   justify-content: space-evenly;
 
   & > *:last-child {
-    color: ${(props) => `rgba(${props.theme.bodyRgba}, 0.6)`};
+    color: ${(props) => props.theme.body};
     font-size: calc(0.5rem + 1.5vw);
     font-weight: 300;
   }

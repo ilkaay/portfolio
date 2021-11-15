@@ -11,7 +11,7 @@ import Repository from "./Repository";
 const renderTop = (props) => {
   return (
     <div key='top'>
-      <Logo color={props.clicked ? "dark" : "light"} />
+      <Logo color={props.clicked ? "light" : "dark"} />
       <HomeButton />
       <Contact />
     </div>
@@ -30,7 +30,7 @@ const renderMiddle = (props) => {
 const renderBottom = (props) => {
   return (
     <div key='bottom'>
-      <SocialMediaIcons color={props.clicked ? "dark" : "light"} />
+      <SocialMediaIcons color={props.clicked ? "light" : "dark"} />
       <BottomBar clicked={props.clicked} />
     </div>
   );

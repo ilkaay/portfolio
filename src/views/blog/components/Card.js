@@ -1,14 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const CardBox = styled(NavLink)`
+const CardBox = styled.a`
   width: calc(10rem + 15vw);
   text-decoration: none;
   height: 20rem;
   padding: 1rem;
   color: ${(props) => props.theme.text};
-  border: 2px solid ${(props) => props.theme.text};
+  border: 2px solid ${(props) => props.theme.body};
   backdrop-filter: blur(2px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -19,7 +18,7 @@ const CardBox = styled(NavLink)`
 
   &:hover {
     color: ${(props) => props.theme.body};
-    background-color: ${(props) => props.theme.text};
+    background-color: ${(props) => props.theme.body};
     transition: all 0.3s ease;
   }
 `;
@@ -33,33 +32,39 @@ const Image = styled.div`
   background-position: center center;
 
   ${CardBox}:hover & {
-    border: 1px solid ${(props) => props.theme.body};
+    border: 1px solid ${(props) => props.theme.text};
   }
 `;
 
 const Title = styled.h5`
-  color: inherit;
+  color: ${(props) => props.theme.body};
   padding: 0.5rem 0;
   padding-top: 1rem;
   font-family: "Karla", sans-serif;
   font-weight: 700;
-  border-bottom: 1px solid ${(props) => props.theme.text};
+  border-bottom: 1px solid ${(props) => props.theme.body};
 
   ${CardBox}:hover & {
-    border-bottom: 1px solid ${(props) => props.theme.body};
+    color: ${(props) => props.theme.text};
+    border-bottom: 1px solid ${(props) => props.theme.text};
   }
 `;
 
 const Date = styled.span`
+  color: ${(props) => props.theme.body};
   display: flex;
   justify-content: end;
   padding: 0.5rem 0;
+
+  ${CardBox}:hover & {
+    color: ${(props) => props.theme.text};
+  }
 `;
 const Card = (props) => {
   const { name, date, imgSrc, link } = props.blog;
 
   return (
-    <CardBox target='_blank' to={{ pathname: link }}>
+    <CardBox rel='norefferer' target='_blank' href={link}>
       <Image img={imgSrc} />
       <Title>{name}</Title>
       <Date>{date}</Date>

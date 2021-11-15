@@ -30,8 +30,8 @@ const Home = styled.button`
   }
 
   &:hover {
-    background-color: rgb(217, 4, 41, 0.4);
-    box-shadow: 0 0 8px 6px rgb(217, 4, 41, 0.2);
+    background-color: rgb(219, 0, 182, 0.4);
+    box-shadow: 0 0 8px 6px rgb(219, 0, 182, 0.3);
   }
 `;
 const HomeButton = () => {

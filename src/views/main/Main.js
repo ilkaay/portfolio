@@ -36,7 +36,7 @@ const Icon = styled.button`
 
 const PersonalInfoWrapper = styled.div`
   position: absolute;
-  background-color: #040404;
+  background-color: ${(props) => props.theme.text};
   top: 0;
   bottom: 0;
   right: 50%;

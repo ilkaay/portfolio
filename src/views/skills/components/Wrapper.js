@@ -6,7 +6,7 @@ import DevelopeBox from "./DevelopeBox";
 import Particle from "../../../components/Particle";
 
 const MainContainer = styled.div`
-  background-color: ${(props) => props.theme.body};
+  background-color: ${(props) => props.theme.text};
   width: 100vw;
   height: 100vh;
   position: relative;

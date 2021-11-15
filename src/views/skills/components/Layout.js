@@ -6,9 +6,9 @@ import SocialMediaIcons from "../../../components/SocialMediaIcons";
 const Layout = () => {
   return (
     <>
-      <Logo theme='light' />
+      <Logo color='dark' />
       <HomeButton />
-      <SocialMediaIcons />
+      <SocialMediaIcons color='dark' />
     </>
   );
 };

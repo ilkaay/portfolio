@@ -5,7 +5,7 @@ import Layout from "./Layout";
 import Cards from "./Cards";
 
 const Container = styled.div`
-  background-color: ${(props) => `rgba(${props.theme.bodyRgba}, 0.8)`};
+  background-color: ${(props) => `rgba(${props.theme.textRgba}, 0.5)`};
   width: 100%;
   height: 100vh;
   position: relative;

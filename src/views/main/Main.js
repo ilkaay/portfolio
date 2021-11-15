@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import MoonPhases from "../../components/MoonPhases";
-import LinksWrapper from "./LinksWrapper";
+import LinksWrapper from "./components/LinksWrapper";
 import PersonalInfo from "./components/PersonalInfo";
 
 const MainContainer = styled.div`

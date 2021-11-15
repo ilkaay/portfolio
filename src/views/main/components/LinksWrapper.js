@@ -1,12 +1,12 @@
 import React from "react";
 
-import HomeButton from "../../components/HomeButton";
-import Logo from "../../components/Logo";
-import SocialMediaIcons from "../../components/SocialMediaIcons";
-import Blog from "./components/Blog";
-import BottomBar from "./components/BottomBar";
-import Contact from "./components/Contact";
-import Repository from "./components/Repository";
+import HomeButton from "../../../components/HomeButton";
+import Logo from "../../../components/Logo";
+import SocialMediaIcons from "../../../components/SocialMediaIcons";
+import Blog from "./Blog";
+import BottomBar from "./BottomBar";
+import Contact from "./Contact";
+import Repository from "./Repository";
 
 const renderTop = (props) => {
   return (

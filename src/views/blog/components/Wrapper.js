@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Layout from "./components/Layout";
+import Layout from "./Layout";
 
-import Cards from "./components/Cards";
+import Cards from "./Cards";
 
 const Container = styled.div`
   background-color: ${(props) => `rgba(${props.theme.bodyRgba}, 0.8)`};

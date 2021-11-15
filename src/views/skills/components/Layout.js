@@ -8,7 +8,7 @@ const Layout = () => {
     <>
       <Logo theme='light' />
       <HomeButton />
-      <SocialMediaIcons theme='light' />
+      <SocialMediaIcons />
     </>
   );
 };

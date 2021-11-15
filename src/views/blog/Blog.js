@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import BlogBackground from "../../assets/images/blog-background.jpg";
 
-import Wrapper from "./Wrapper";
+import Wrapper from "./components/Wrapper";
 
 const BlogContainer = styled.div`
   background-image: url(${BlogBackground});

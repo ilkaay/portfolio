@@ -5,6 +5,7 @@ import HomeButton from "../../../components/HomeButton";
 import Logo from "../../../components/Logo";
 import Particle from "../../../components/Particle";
 import SocialMediaIcons from "../../../components/SocialMediaIcons";
+import Picture from "./Picture";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -22,6 +23,7 @@ const Wrapper = () => {
       <HomeButton />
       <Particle theme='dark' />
       <BigTitle text='ABOUT' top='10%' left='5%' />
+      <Picture />
     </Box>
   );
 };

@@ -38,7 +38,7 @@ const HomeButton = () => {
   return (
     <Home>
       <NavLink to='/'>
-        <HomeBtn width={30} height={30} fill='currentColor' />
+        <HomeBtn />
       </NavLink>
     </Home>
   );

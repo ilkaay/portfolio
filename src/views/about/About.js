@@ -1,7 +1,14 @@
 import React from "react";
+import { ThemeProvider } from "styled-components";
+import { darkTheme } from "../../Themes";
+import Wrapper from "./components/Wrapper";
 
 const About = () => {
-  return <div>About Component/Page</div>;
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <Wrapper />
+    </ThemeProvider>
+  );
 };
 
 export default About;

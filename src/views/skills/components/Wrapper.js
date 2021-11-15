@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Layout from "../../blog/components/Layout";
 import DevelopeBox from "./DevelopeBox";
-import Particle from "./Particle";
+import Particle from "../../../components/Particle";
 
 const MainContainer = styled.div`
   background-color: ${(props) => props.theme.body};

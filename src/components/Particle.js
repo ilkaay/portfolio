@@ -3,8 +3,8 @@ import React from "react";
 import Particles from "react-tsparticles";
 import styled from "styled-components";
 
-import configDark from "../../../config/particlesjs-config.json";
-import configLight from "../../../config/particlesjs-config-light.json";
+import configDark from "../config/particlesjs-config.json";
+import configLight from "../config/particlesjs-config-light.json";
 
 const Box = styled.div`
   position: absolute;

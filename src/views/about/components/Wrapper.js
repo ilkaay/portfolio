@@ -1,10 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import BigTitle from "../../../components/BigTitle";
-import HomeButton from "../../../components/HomeButton";
-import Logo from "../../../components/Logo";
-import Particle from "../../../components/Particle";
-import SocialMediaIcons from "../../../components/SocialMediaIcons";
+import Description from "./Description";
+import Layout from "./Layout";
 import Picture from "./Picture";
 
 const Box = styled.div`
@@ -18,12 +15,9 @@ const Box = styled.div`
 const Wrapper = () => {
   return (
     <Box>
-      <Logo theme='dark' />
-      <SocialMediaIcons theme='dark' />
-      <HomeButton />
-      <Particle theme='dark' />
-      <BigTitle text='ABOUT' top='10%' left='5%' />
+      <Layout />
       <Picture />
+      <Description />
     </Box>
   );
 };

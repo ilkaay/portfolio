@@ -20,7 +20,7 @@ const Blog = () => {
   return (
     <BlogContainer>
       <Wrapper />
-      <BigTitle text='BLOG' top='5rem' left='5rem' />
+      <BigTitle text='BLOG' top='5rem' right='5rem' />
     </BlogContainer>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import BlogBackground from "../../assets/images/blog-background.jpg";
+import BigTitle from "../../components/BigTitle";
 
 import Wrapper from "./components/Wrapper";
 
@@ -19,6 +20,7 @@ const Blog = () => {
   return (
     <BlogContainer>
       <Wrapper />
+      <BigTitle text='BLOG' top='5rem' left='5rem' />
     </BlogContainer>
   );
 };

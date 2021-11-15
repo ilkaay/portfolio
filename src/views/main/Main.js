@@ -27,8 +27,8 @@ const Icon = styled.button`
   display: flex;
   position: absolute;
   transform: translate(50%, 0%);
-  bottom: ${(props) => (props.click ? "8%" : "50%")};
-  right: ${(props) => (props.click ? "8%" : "50%")};
+  bottom: ${(props) => (props.clicked ? "8%" : "50%")};
+  right: ${(props) => (props.clicked ? "8%" : "50%")};
   background: none;
   border: none;
   transition: all 1s ease;
@@ -54,11 +54,11 @@ const Main = () => {
           height: click ? "100%" : "0%",
         }}
       />
-      <LinksWrapper click={click} />
-      <Icon click={click} onClick={() => setClick(!click)}>
-        <MoonPhases click={click} />
-      </Icon>
       {click ? <PersonalInfo /> : undefined}
+      <LinksWrapper clicked={click} />
+      <Icon clicked={click} onClick={() => setClick(!click)}>
+        <MoonPhases clicked={click} />
+      </Icon>
     </MainContainer>
   );
 };

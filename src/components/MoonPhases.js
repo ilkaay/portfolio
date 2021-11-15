@@ -73,8 +73,8 @@ const MoonPhases = (props) => {
   return (
     <Moon
       style={{
-        width: props.click ? "8rem" : "15rem",
-        height: props.click ? "8rem" : "15rem",
+        width: props.clicked ? "8rem" : "15rem",
+        height: props.clicked ? "8rem" : "15rem",
       }}
     >
       <Disc />

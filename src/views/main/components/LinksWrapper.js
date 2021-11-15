@@ -10,28 +10,29 @@ import Repository from "./Repository";
 
 const renderTop = (props) => {
   return (
-    <>
-      <Logo theme={props.click ? "dark" : "light"} />
+    <div key='top'>
+      <Logo color={props.clicked ? "dark" : "light"} />
       <HomeButton />
       <Contact />
-    </>
-  );
-};
-const renderBottom = (props) => {
-  return (
-    <>
-      <SocialMediaIcons theme={props.click ? "dark" : "light"} />
-      <BottomBar click={props.click} />
-    </>
+    </div>
   );
 };
 
 const renderMiddle = (props) => {
   return (
-    <>
-      <Repository click={props.click} />
+    <div key='middle'>
+      <Repository clicked={props.clicked} />
       <Blog />
-    </>
+    </div>
+  );
+};
+
+const renderBottom = (props) => {
+  return (
+    <div key='bottom'>
+      <SocialMediaIcons color={props.clicked ? "dark" : "light"} />
+      <BottomBar clicked={props.clicked} />
+    </div>
   );
 };
 

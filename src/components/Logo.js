@@ -15,7 +15,7 @@ const CreateLogo = styled.h1`
   z-index: 3;
 `;
 const Logo = (props) => {
-  return <CreateLogo color={props.theme}>AY</CreateLogo>;
+  return <CreateLogo color={props.color}>AY</CreateLogo>;
 };
 
 export default Logo;

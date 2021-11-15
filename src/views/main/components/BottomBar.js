@@ -14,12 +14,12 @@ const BottombarContainer = styled.div`
 `;
 
 const ABOUT = styled(NavLink)`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  color: ${(props) => (props.clicked ? props.theme.body : props.theme.text)};
   text-decoration: none;
   z-index: 1;
 
   &:hover {
-    color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+    color: ${(props) => (props.clicked ? props.theme.body : props.theme.text)};
   }
 `;
 const SKILLS = styled(NavLink)`
@@ -34,7 +34,7 @@ const SKILLS = styled(NavLink)`
 const BottomBar = (props) => {
   return (
     <BottombarContainer>
-      <ABOUT click={props.click} to='/about'>
+      <ABOUT clicked={+props.clicked} to='/about'>
         <motion.h2
           initial={{
             y: 200,

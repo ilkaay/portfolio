@@ -21,7 +21,7 @@ const Icons = styled.div`
 
 const Icon = styled.i`
   color: ${(props) =>
-    props.theme === "dark" ? darkTheme.text : darkTheme.body};
+    props.color === "dark" ? darkTheme.text : darkTheme.body};
   font-size: 1.7rem;
 `;
 
@@ -34,7 +34,7 @@ const SocialMediaIcons = (props) => {
         transition={{ type: "spring", duration: 1, delay: 1 }}
       >
         <a rel='noreferrer' target='_blank' href='https://github.com/ilkaay'>
-          <Icon theme={props.theme} className='bi bi-github' />
+          <Icon color={props.color} className='bi bi-github' />
         </a>
       </motion.div>
 
@@ -48,7 +48,7 @@ const SocialMediaIcons = (props) => {
           target='_blank'
           href='https://twitter.com/ilkaayyuksel'
         >
-          <Icon theme={props.theme} className='bi bi-twitter' />
+          <Icon color={props.color} className='bi bi-twitter' />
         </a>
       </motion.div>
 
@@ -62,7 +62,7 @@ const SocialMediaIcons = (props) => {
           target='_blank'
           href='https://www.linkedin.com/in/ilkaayyuksel'
         >
-          <Icon theme={props.theme} className='bi bi-linkedin' />
+          <Icon color={props.color} className='bi bi-linkedin' />
         </a>
       </motion.div>
     </Icons>

@@ -44,7 +44,7 @@ const Footer = styled.footer`
   justify-content: space-between;
 `;
 
-const Link = styled(NavLink)`
+const Link = styled.a`
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
   text-decoration: none;
@@ -78,7 +78,7 @@ const Card = (props) => {
       <Title>{name}</Title>
       <Description>{description}</Description>
       <Footer>
-        <Link to={{ pathname: `${github}` }} target='_blank'>
+        <Link rel='noreferrer' href={github} target='_blank'>
           Visit
         </Link>
       </Footer>

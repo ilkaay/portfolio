@@ -2,13 +2,25 @@ import React from "react";
 import styled from "styled-components";
 import { Develope } from "../../../components/Svgs";
 
+import background from "../../../assets/images/background.png";
 const Box = styled.div`
-  border: 2px solid ${(props) => props.theme.text};
-  color: ${(props) => props.theme.body};
-  background: #5d4157;
-  background: linear-gradient(to right, #a8caba, #5d4157);
+  border: 1px solid ${(props) => props.theme.body};
+  color: ${(props) => props.theme.text};
 
-  padding: 2rem;
+  background-image: url(${background});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+  &:hover {
+    border: 1px solid #33a49d;
+    box-shadow: 0 0 8px 6px rgba(51, 164, 157, 0.3);
+  }
+`;
+
+const Blur = styled.div`
+  padding: 3rem;
   width: 30vw;
   height: 60vh;
   z-index: 3;
@@ -18,14 +30,11 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  &:hover {
-    border: 1px solid ${(props) => props.theme.body};
-  }
+  backdrop-filter: blur(5px);
 `;
 
 const Title = styled.h2`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.body};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +46,7 @@ const Title = styled.h2`
 `;
 
 const Description = styled.div`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.body};
   font-size: calc(0.6em + 1vw);
   padding: 0.5rem 0;
   strong {
@@ -53,20 +62,23 @@ const Description = styled.div`
 const DevelopeBox = () => {
   return (
     <Box>
-      <Title>
-        <Develope width={40} height={40} fill='#040404' /> Frontend Developer
-      </Title>
-      <Description>Something ...</Description>
-      <Description>
-        <strong>Skills</strong>
-        <p>
-          Html, Css, Js, React, Redux, Vue, Vuex, Angular, Ngrx, Bootstrap etc.
-        </p>
-      </Description>
-      <Description>
-        <strong>Tools</strong>
-        <p>VScode, Github etc.</p>
-      </Description>
+      <Blur>
+        <Title>
+          <Develope width={40} height={40} fill='#f4f4f4' /> Frontend Developer
+        </Title>
+        <Description>Something ...</Description>
+        <Description>
+          <strong>Skills</strong>
+          <p>
+            Html, Css, Js, React, Redux, Vue, Vuex, Angular, Ngrx, Bootstrap
+            etc.
+          </p>
+        </Description>
+        <Description>
+          <strong>Tools</strong>
+          <p>VScode, Github etc.</p>
+        </Description>
+      </Blur>
     </Box>
   );
 };

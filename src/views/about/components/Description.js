@@ -29,10 +29,10 @@ const Description = () => {
       <br /> <br />
       I am passionate about software development and designing websites. I
       taught myself about front-end development because of that passion. I
-      learned HTML, CSS, JS and after that, I learned VUE and GraphQL to develop
-      more professional apps. I am still teaching myself about front-end
-      engineering and currently, I am learning React, React Native, and
-      Typescript.
+      learned HTML, CSS, JS and after that, I learned VUE, React, Angular,
+      Typescript and GraphQL to develop more professional apps. I am still
+      teaching myself about front-end engineering and currently, I practice with
+      the technologies I have learned.
       <br /> <br />I am looking for new things to learn, to be a better
       engineer.
     </Container>

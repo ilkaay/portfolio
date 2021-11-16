@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
@@ -6,7 +7,19 @@ import BigTitle from "../../components/BigTitle";
 
 import Wrapper from "./components/Wrapper";
 
-const BlogContainer = styled.div`
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5,
+    },
+  },
+};
+
+const BlogContainer = styled(motion.div)`
   background-image: url(${BlogBackground});
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,7 +31,12 @@ const BlogContainer = styled.div`
 
 const Blog = () => {
   return (
-    <BlogContainer>
+    <BlogContainer
+      vaiants={container}
+      initial='hidden'
+      animate='show'
+      exit={{ opacity: 0, transition: { duration: 0.5 } }}
+    >
       <Wrapper />
       <BigTitle color='dark' text='BLOG' top='5rem' left='5rem' />
     </BlogContainer>

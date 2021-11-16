@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import styled from "styled-components";
 
@@ -5,7 +6,19 @@ import MoonPhases from "../../components/MoonPhases";
 import LinksWrapper from "./components/LinksWrapper";
 import PersonalInfo from "./components/PersonalInfo";
 
-const MainContainer = styled.div`
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5,
+    },
+  },
+};
+
+const MainContainer = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
   height: 100vh;
@@ -47,7 +60,12 @@ const Main = () => {
   const [click, setClick] = useState(false);
 
   return (
-    <MainContainer>
+    <MainContainer
+      vaiants={container}
+      initial='hidden'
+      animate='show'
+      exit={{ opacity: 0, transition: { duration: 0.5 } }}
+    >
       <PersonalInfoWrapper
         style={{
           width: click ? "50%" : "0%",

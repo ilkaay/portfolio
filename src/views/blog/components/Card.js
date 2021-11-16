@@ -1,7 +1,21 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
-const CardBox = styled.a`
+const Item = {
+  hidden: {
+    scale: 0,
+  },
+  show: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+    },
+  },
+};
+
+const CardBox = styled(motion.a)`
   width: calc(10rem + 15vw);
   text-decoration: none;
   height: 20rem;
@@ -61,10 +75,16 @@ const Date = styled.span`
   }
 `;
 const Card = (props) => {
-  const { name, date, imgSrc, link } = props.blog;
+  const { id, name, date, imgSrc, link } = props.blog;
 
   return (
-    <CardBox rel='norefferer' target='_blank' href={link}>
+    <CardBox
+      key={id}
+      variants={Item}
+      rel='norefferer'
+      target='_blank'
+      href={link}
+    >
       <Image img={imgSrc} />
       <Title>{name}</Title>
       <Date>{date}</Date>

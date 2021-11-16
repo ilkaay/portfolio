@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import spaceman from "../../../assets/images/spaceman.png";
+import skygirl from "../../../assets/images/skygirl.jpg";
 
 const float = keyframes`
   0%{transform: translateY(-10px)}
@@ -13,7 +13,7 @@ const Image = styled.div`
   position: absolute;
   top: 10%;
   right: 5%;
-  width: 20vw;
+  width: 35vw;
   animation: ${float} 4s ease infinite;
   img {
     width: 100%;
@@ -23,7 +23,7 @@ const Image = styled.div`
 const Picture = () => {
   return (
     <Image>
-      <img src={spaceman} alt='spaceman' />
+      <img src={skygirl} alt='skygirl' />
     </Image>
   );
 };

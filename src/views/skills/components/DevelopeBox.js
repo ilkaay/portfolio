@@ -22,7 +22,7 @@ const Box = styled.div`
 const Blur = styled.div`
   padding: 3rem;
   width: 30vw;
-  height: 60vh;
+  height: 45vh;
   z-index: 3;
   line-height: 1.5;
 
@@ -59,24 +59,34 @@ const Description = styled.div`
   }
 `;
 
+const Link = styled.a`
+  color: ${(props) => props.theme.body};
+  font-size: calc(0.6em + 1vw);
+  padding: 0.5rem 0;
+  text-decoration: none;
+
+  &:hover {
+    color: rgba(51, 164, 157);
+  }
+`;
+
 const DevelopeBox = () => {
   return (
     <Box>
       <Blur>
         <Title>
-          <Develope width={40} height={40} fill='#f4f4f4' /> Frontend Developer
+          <Develope width={40} height={40} fill='#f4f4f4' /> Software Engineer
         </Title>
-        <Description>Something ...</Description>
         <Description>
-          <strong>Skills</strong>
-          <p>
-            Html, Css, Js, React, Redux, Vue, Vuex, Angular, Ngrx, Bootstrap
-            etc.
-          </p>
+          I am a software engineer{" "}
+          <Link href='https://gusto.com/' target='_blank'>
+            @gusto
+          </Link>
+          .
         </Description>
         <Description>
-          <strong>Tools</strong>
-          <p>VScode, Github etc.</p>
+          <strong>My Skills</strong>
+          <p>Vue, Vuex, React, Redux, Angular, Ngrx, Graphql</p>
         </Description>
       </Blur>
     </Box>

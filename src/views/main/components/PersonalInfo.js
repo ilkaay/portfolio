@@ -91,8 +91,7 @@ const PersonalInfo = () => {
             I am a software engineer{" "}
             <Link href='https://gusto.com/' target='_blank'>
               @gusto
-            </Link>{" "}
-            {"."}
+            </Link>
           </h6>
         </Text>
       </SubBox>

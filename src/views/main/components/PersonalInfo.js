@@ -65,6 +65,17 @@ const Text = styled.div`
     font-weight: 300;
   }
 `;
+
+const Link = styled.a`
+  color: ${(props) => props.theme.body};
+  font-size: calc(0.6em + 1vw);
+  padding: 0.5rem 0;
+  text-decoration: none;
+
+  &:hover {
+    color: ${(props) => props.theme.body};
+  }
+`;
 const PersonalInfo = () => {
   return (
     <Box
@@ -75,8 +86,14 @@ const PersonalInfo = () => {
       <SubBox>
         <Text>
           <h1>Hi, </h1>
-          <h2>I'm ...</h2>
-          <h6>Write something...</h6>
+          <h2>I'm ilkay</h2>
+          <h6>
+            I am a software engineer{" "}
+            <Link href='https://gusto.com/' target='_blank'>
+              @gusto
+            </Link>{" "}
+            {"."}
+          </h6>
         </Text>
       </SubBox>
       <SubBox>
